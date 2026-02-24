@@ -1,0 +1,231 @@
+.about {
+  padding: 100px 32px;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-medium);
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 500px;
+  font-weight: 300;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+/* Box shared */
+.skillsBox,
+.timelineBox,
+.valuesBox {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.skillsBox:hover,
+.timelineBox:hover,
+.valuesBox:hover {
+  box-shadow: var(--shadow);
+}
+
+.skillsBox { grid-column: 1; grid-row: 1 / 3; }
+.timelineBox { grid-column: 2; grid-row: 1; }
+.valuesBox { grid-column: 2; grid-row: 2; }
+
+.boxLabel {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Skills */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.skillGroupName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+.skillItem:last-child { border-bottom: none; }
+
+.skillDot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 44px 20px 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.timelineYear {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  padding-top: 2px;
+  text-align: right;
+}
+
+.timelineLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.timelineDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timelineTrack {
+  width: 1px;
+  flex: 1;
+  min-height: 28px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.timelineContent {
+  padding-bottom: 20px;
+}
+
+.timelineRole {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.timelineMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.timelineBadge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid var(--accent-medium);
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 4px;
+}
+
+/* Values */
+.valueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+.valueItem:last-child { border-bottom: none; }
+
+.valueIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.valueTitle {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.valueDesc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .skillsBox, .timelineBox, .valuesBox {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
